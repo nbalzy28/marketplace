@@ -71,7 +71,7 @@ function sendMessageToSeller(item, message) {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email: 'balzano0928@gmail.com', phone: '+4435711513', message }), // Replace with actual seller email and phone
+        body: JSON.stringify({ email: 'your-email@gmail.com', message }), // Replace with your email address
     })
     .then(response => {
         if (response.ok) {
