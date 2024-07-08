@@ -64,28 +64,6 @@ const items = [
 
 const itemList = document.getElementById('item-list');
 
-// Function to send message using fetch API
-function sendMessageToSeller(item, message) {
-    fetch('/send-message', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email: 'your-email@gmail.com', message }), // Replace with your email address
-    })
-    .then(response => {
-        if (response.ok) {
-            alert(`Your message "${message}" has been sent to the seller.`);
-        } else {
-            alert('Failed to send message.');
-        }
-    })
-    .catch(error => {
-        console.error('Error sending message:', error);
-        alert('Failed to send message.');
-    });
-}
-
 // Populate items
 items.forEach((item, index) => {
     const itemElement = document.createElement('div');
@@ -113,17 +91,51 @@ items.forEach((item, index) => {
     priceElement.textContent = `$${item.price}`;
     itemElement.appendChild(priceElement);
     
-    // Contact seller button
+    // Contact seller button and form
     const contactButton = document.createElement('button');
     contactButton.classList.add('offer-button');
     contactButton.textContent = 'Contact Seller';
     contactButton.addEventListener('click', () => {
-        const message = prompt(`Enter your message to the seller regarding ${item.title}:`);
-        if (message) {
-            sendMessageToSeller(item, message);
+        // Create the form elements
+        const form = document.createElement('form');
+        form.classList.add('contact-form');
+
+        const firstNameInput = document.createElement('input');
+        firstNameInput.type = 'text';
+        firstNameInput.name = 'firstName';
+        firstNameInput.placeholder = 'First Name';
+        form.appendChild(firstNameInput);
+
+        const lastNameInput = document.createElement('input');
+        lastNameInput.type = 'text';
+        lastNameInput.name = 'lastName';
+        lastNameInput.placeholder = 'Last Name';
+        form.appendChild(lastNameInput);
+
+        const emailInput = document.createElement('input');
+        emailInput.type = 'email';
+        emailInput.name = 'email';
+        emailInput.placeholder = 'Email';
+        form.appendChild(emailInput);
+
+        const messageTextarea = document.createElement('textarea');
+        messageTextarea.name = 'message';
+        messageTextarea.placeholder = 'Your Message (optional)';
+        form.appendChild(messageTextarea);
+
+        const submitButton = document.createElement('button');
+        submitButton.type = 'submit';
+        submitButton.textContent = 'Send Message';
+        form.appendChild(submitButton);
+
+        // Clear any existing form and append the new one
+        const existingForm = itemElement.querySelector('.contact-form');
+        if (existingForm) {
+            existingForm.remove();
         }
+        itemElement.appendChild(form);
     });
+
     itemElement.appendChild(contactButton);
-    
     itemList.appendChild(itemElement);
 });
