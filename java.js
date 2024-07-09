@@ -67,6 +67,14 @@ const modal = document.getElementById('myModal');
 const closeBtn = document.querySelector('.close');
 const contactForm = document.getElementById('contactForm');
 
+// Function to display contact form in modal
+function displayContactForm(item) {
+    // Clear form inputs
+
+    // Display the modal
+    modal.style.display = 'block';
+}
+
 // Populate items
 items.forEach((item, index) => {
     const itemElement = document.createElement('div');
