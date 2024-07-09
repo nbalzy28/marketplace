@@ -1,4 +1,4 @@
-// Sample data (you can replace this with your actual data from a database or API)
+​// Sample data (you can replace this with your actual data from a database or API)
 const items = [
     { 
         title: "Vintage Chair", 
@@ -70,6 +70,7 @@ const contactForm = document.getElementById('contactForm');
 // Function to display contact form in modal
 function displayContactForm(item) {
     // Clear form inputs
+    contactForm.reset();
 
     // Display the modal
     modal.style.display = 'block';
