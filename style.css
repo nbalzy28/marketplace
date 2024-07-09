@@ -178,3 +178,11 @@ header {
 #clear-cart-button:hover {
     background-color: #FF1493;
 }
+
+@media only screen and (max-width: 768px) {
+
+#shopping-cart-container {
+    position: absolute;
+    top: 25px;
+    right: 10px;
+}
