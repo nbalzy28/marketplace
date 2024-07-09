@@ -14,7 +14,7 @@
         <!-- Items will be dynamically added here -->
     </main>
 
-    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xldreydv" method="post" class="contact-form">
+    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{xldreydv}" method="post" class="contact-form">
         <button type="button" class="close" onclick="toggleForm()">×</button>
         <fieldset id="fs-frm-inputs">
             <label for="first-name">First Name</label>
@@ -33,7 +33,13 @@
     </form>
 
     <footer>
-        <!-- Footer content -->
+        <!-- Shopping Cart Container -->
+        <div id="shopping-cart-container">
+            <div id="shopping-cart">
+                Shopping Cart: <span id="item-count">0 items</span> - Total: $<span id="total-amount">0.00</span>
+            </div>
+            <button onclick="clearCart()" id="clear-cart-button">Clear Cart</button>
+        </div>
     </footer>
 
     <script src="java.js"></script>
