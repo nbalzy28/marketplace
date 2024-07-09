@@ -1,4 +1,3 @@
-​// Sample data (you can replace this with your actual data from a database or API)
 const items = [
     { 
         title: "Vintage Chair", 
