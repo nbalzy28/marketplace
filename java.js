@@ -93,9 +93,15 @@ items.forEach(item => {
     // Toggle contact form visibility on button click
     contactButton.addEventListener('click', () => {
         const form = document.getElementById('fs-frm');
-        form.style.display = 'block'; // Ensure the form is displayed
+        form.classList.add('show-form'); // Show the form
     });
 
     itemElement.appendChild(contactButton);
     itemList.appendChild(itemElement);
 });
+
+// Function to toggle contact form visibility
+function toggleForm() {
+    const form = document.getElementById('fs-frm');
+    form.classList.remove('show-form'); // Hide the form
+}

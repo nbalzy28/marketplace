@@ -10,7 +10,7 @@ header {
     padding: 20px;
     text-align: center;
     border-radius: 0 0 50% 50%;
-  font-family: 'Lucida Handwriting',     cursive;
+    font-family: 'Lucida Handwriting', cursive;
 }
 
 .header-title {
@@ -69,9 +69,8 @@ header {
     background-color: #FF69B4;
 }
 
-/* Add this style to make the form initially hidden */
 .contact-form {
-    display: none;
+    display: none; /* Hide the form by default */
     position: fixed;
     top: 50%;
     left: 50%;
@@ -83,11 +82,46 @@ header {
     border-radius: 8px;
     max-width: 90%;
     width: 400px;
-    max-height: 90%;
-    overflow-y: auto;
 }
 
-/* Style for closing the form */
+/* Fieldset and input style */
+#fs-frm-inputs {
+    display: grid;
+    grid-gap: 10px;
+}
+
+#fs-frm-inputs label {
+    font-weight: bold;
+}
+
+#fs-frm-inputs input,
+#fs-frm-inputs textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#fs-frm-inputs textarea {
+    resize: vertical;
+}
+
+/* Submit button style */
+#fs-frm input[type="submit"] {
+    background-color: #318CE7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#fs-frm input[type="submit"]:hover {
+    background-color: #FF69B4;
+}
+
 .close {
     position: absolute;
     top: 10px;
@@ -95,32 +129,16 @@ header {
     font-size: 24px;
     font-weight: bold;
     cursor: pointer;
-}
-
-/* Adjust form and button styles */
-.contact-form input,
-.contact-form textarea,
-.contact-form button {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 14px;
-}
-
-.contact-form textarea {
-    height: 100px; /* Adjust height as needed */
-}
-
-.contact-form button {
-    background-color: #318CE7;
-    color: white;
+    background: none;
     border: none;
-    cursor: pointer;
+    padding: 0;
+    color: #666; /* Close button color */
 }
 
-.contact-form button:hover {
-    background-color: #FF69B4;
+.close:hover {
+    color: #FF69B4; /* Change color on hover if desired */
+}
+
+.contact-form.show-form {
+    display: block;
 }

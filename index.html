@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +14,8 @@
         <!-- Items will be dynamically added here -->
     </main>
 
-    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xldreydv" method="post" class="contact-form">
+    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{xldreydv}" method="post" class="contact-form">
+        <button type="button" class="close" onclick="toggleForm()">×</button>
         <fieldset id="fs-frm-inputs">
             <label for="first-name">First Name</label>
             <input type="text" name="first-name" id="first-name" placeholder="Your First Name" required="">
