@@ -63,76 +63,37 @@ const items = [
 
 const itemList = document.getElementById('item-list');
 
-// Populate items
-items.forEach((item, index) => {
+items.forEach(item => {
     const itemElement = document.createElement('div');
     itemElement.classList.add('item');
     
-    // Item image (replace with actual images or placeholders)
     const imgElement = document.createElement('img');
     imgElement.src = item.image;
     itemElement.appendChild(imgElement);
     
-    // Item title
     const titleElement = document.createElement('div');
     titleElement.classList.add('item-title');
     titleElement.textContent = item.title;
     itemElement.appendChild(titleElement);
     
-    // Item description
     const descElement = document.createElement('div');
     descElement.textContent = item.description;
     itemElement.appendChild(descElement);
     
-    // Item price
     const priceElement = document.createElement('div');
     priceElement.classList.add('item-price');
     priceElement.textContent = `$${item.price}`;
     itemElement.appendChild(priceElement);
     
-    // Contact seller button and form
+    // Create Contact Seller button
     const contactButton = document.createElement('button');
     contactButton.classList.add('offer-button');
     contactButton.textContent = 'Contact Seller';
+    
+    // Toggle contact form visibility on button click
     contactButton.addEventListener('click', () => {
-        // Create the form elements
-        const form = document.createElement('form');
-        form.classList.add('contact-form');
-
-        const firstNameInput = document.createElement('input');
-        firstNameInput.type = 'text';
-        firstNameInput.name = 'firstName';
-        firstNameInput.placeholder = 'First Name';
-        form.appendChild(firstNameInput);
-
-        const lastNameInput = document.createElement('input');
-        lastNameInput.type = 'text';
-        lastNameInput.name = 'lastName';
-        lastNameInput.placeholder = 'Last Name';
-        form.appendChild(lastNameInput);
-
-        const emailInput = document.createElement('input');
-        emailInput.type = 'email';
-        emailInput.name = 'email';
-        emailInput.placeholder = 'Email';
-        form.appendChild(emailInput);
-
-        const messageTextarea = document.createElement('textarea');
-        messageTextarea.name = 'message';
-        messageTextarea.placeholder = 'Your Message (optional)';
-        form.appendChild(messageTextarea);
-
-        const submitButton = document.createElement('button');
-        submitButton.type = 'submit';
-        submitButton.textContent = 'Send Message';
-        form.appendChild(submitButton);
-
-        // Clear any existing form and append the new one
-        const existingForm = itemElement.querySelector('.contact-form');
-        if (existingForm) {
-            existingForm.remove();
-        }
-        itemElement.appendChild(form);
+        const form = document.getElementById('fs-frm');
+        form.style.display = 'block'; // Ensure the form is displayed
     });
 
     itemElement.appendChild(contactButton);

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brynn's Marketplace</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -13,6 +13,29 @@
         </div>
     </header>
     <main id="item-list">
+        <!-- Items will be dynamically added here -->
     </main>
-    <script src="java.js"></script>
+
+    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{xldreydv}" method="post" class="contact-form">
+        <fieldset id="fs-frm-inputs">
+            <label for="first-name">First Name</label>
+            <input type="text" name="first-name" id="first-name" placeholder="Your First Name" required="">
+            <label for="last-name">Last Name</label>
+            <input type="text" name="last-name" id="last-name" placeholder="Your Last Name" required="">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="email@domain.tld" required="">
+            <label for="phone">Phone Number</label>
+            <input type="tel" name="phone" id="phone" placeholder="Your Phone Number">
+            <label for="message">Message</label>
+            <textarea rows="5" name="message" id="message" placeholder="Enter your message here" required=""></textarea>
+            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+        </fieldset>
+        <input type="submit" value="Submit">
+    </form>
+
+    <footer>
+        <!-- Footer content -->
+    </footer>
+
+    <script src="script.js"></script>
 </body>
