@@ -81,7 +81,7 @@ header {
     transform: translate(-50%, -50%);
     background-color: white;
     padding: 20px;
-    z-index: 1500;
+    z-index: 10000;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     max-width: 90%;
