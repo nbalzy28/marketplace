@@ -314,10 +314,10 @@ header {
     }
 
     #shopping-cart-container {
-        top: 160px;
+        top: 210px;
     }
 
     .add-to-cart {
-        margin-left: 15px;
+        margin-left: 5px;
     }
 }
