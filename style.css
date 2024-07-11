@@ -1,5 +1,5 @@
 body {
-    font-family: cursive;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
@@ -304,4 +304,20 @@ header {
 
 #pickup-content {
     font-size: 0.9rem;
+}
+
+/* Your existing CSS styles */
+
+@media only screen and (max-width: 768px) {
+    #pickup-container {
+        top: 20px;
+    }
+
+    #shopping-cart-container {
+        top: 160px;
+    }
+
+    .add-to-cart {
+        margin-left: 15px;
+    }
 }
