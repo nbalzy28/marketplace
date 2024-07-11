@@ -201,14 +201,18 @@ function viewCart() {
         document.body.removeChild(cartOverlay);
     });
 
+    const contactSellerButton = document.createElement('button');
+    contactSellerButton.classList.add('offer-button');
+    contactSellerButton.textContent = 'Contact Seller';
+    contactSellerButton.addEventListener('click', () => showContactForm());
+
     cartPopup.appendChild(cartItems);
     cartPopup.appendChild(cartTotal);
+    cartPopup.appendChild(contactSellerButton);
     cartPopup.appendChild(closeButton);
 
     cartOverlay.appendChild(cartPopup);
-
-    // Append cartOverlay as the first child of document.body
-    document.body.insertBefore(cartOverlay, document.body.firstChild);
+    document.body.appendChild(cartOverlay);
 }
 
 // Initialize the item list
@@ -219,4 +223,13 @@ updateShoppingCart(); // Initial update of shopping cart display
 const viewCartButton = document.getElementById('view-cart-button');
 viewCartButton.addEventListener('click', () => {
     viewCart();
+});
+
+const pickupContainer = document.getElementById('pickup-container');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+        pickupContainer.style.display = 'none';
+    } else {
+        pickupContainer.style.display = 'block';
+    }
 });
