@@ -311,11 +311,12 @@ header {
 @media only screen and (max-width: 768px) {
     #pickup-container {
         top: 150px;
-        left: 28px;
+        left: 32px;
     }
 
     #shopping-cart-container {
         top: 220px;
+        width: 300px;
     }
 
     .add-to-cart {
