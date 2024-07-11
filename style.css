@@ -311,7 +311,7 @@ header {
 @media only screen and (max-width: 768px) {
     #pickup-container {
         top: 150px;
-        left: 20px;
+        left: 25px;
     }
 
     #shopping-cart-container {
