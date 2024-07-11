@@ -324,3 +324,16 @@ header {
         margin-left: 0px;
     }
 }
+
+@media only screen and (max-device-width: 812px) and (orientation: landscape) {
+    /* Your CSS styles for landscape orientation on iPhone */
+    /* Adjust styles as per your specific layout needs */
+
+    #shopping-cart-container {
+        top: -80px;
+    }
+
+    .add-to-cart {
+        margin-left: 15px;
+    }
+}
