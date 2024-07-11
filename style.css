@@ -315,6 +315,7 @@ header {
     }
 
     #shopping-cart-container {
+        position: relative;
         top: 220px;
         width: 300px;
     }
