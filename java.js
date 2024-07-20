@@ -203,7 +203,7 @@ function viewCart() {
 
     const contactSellerButton = document.createElement('button');
     contactSellerButton.classList.add('offer-button');
-    contactSellerButton.textContent = 'Contact Seller';
+    contactSellerButton.textContent = 'Contact Seller For Details';
     contactSellerButton.addEventListener('click', () => showContactForm());
 
     cartPopup.appendChild(cartItems);
