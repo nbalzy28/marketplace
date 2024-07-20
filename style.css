@@ -322,7 +322,10 @@ header {
 
     .add-to-cart {
         margin-left: 0px;
-        width: 30px;
+    }
+
+    .item {
+    width: 55%;
     }
 }
 
