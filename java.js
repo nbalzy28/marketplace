@@ -104,7 +104,7 @@ function renderItems() {
         // Create Contact Seller button
         const contactButton = document.createElement('button');
         contactButton.classList.add('offer-button');
-        contactButton.textContent = 'Contact Seller';
+        contactButton.textContent = 'Contact Seller For Details';
         contactButton.addEventListener('click', () => showContactForm());
         itemElement.appendChild(contactButton);
 
